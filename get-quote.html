@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get a Quote - Global Fleet</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img class="logoImage" src="images/Screenshot_2024-08-12_215920-removebg-preview.png" alt="Logo">
+        <nav>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about-us.html">About Us</a></li>
+            <li><a href="/contact-us.html">Contact Us</a></li>
+            <li><a href="get-quote.html" class="btn">Get a Quote</a></li>
+            <li><a href="/track-shipment.html" class="btn">Track Your Shipment</a></li>
+          </ul>
+        </nav>
+      </header>
+      
+  <section class="pickup-drop" id="get-quote">
+    <h2>Get a Quote</h2>
+    <form id="quote-form">
+      <label for="pickup">Pick Up Point:</label>
+      <input type="text" id="pickup" name="pickup" placeholder="Enter Pick Up Location" required>
+  
+      <label for="drop">Drop Off Point:</label>
+      <input type="text" id="drop" name="drop" placeholder="Enter Drop Off Location" required>
+  
+      <label for="truck-type">Truck Type:</label>
+      <select id="truck-type" name="truck-type" required>
+        <option value="" disabled selected>Select Truck</option>
+        <option value="4-wheeler">4 Wheeler</option>
+        <option value="6-wheeler">6 Wheeler</option>
+        <option value="10-wheeler">10 Wheeler</option>
+        <option value="12-wheeler">12 Wheeler</option>
+        <option value="14-wheeler">14 Wheeler</option>
+        <option value="16-wheeler">16 Wheeler</option>
+      </select>
+  
+      <button type="submit" class="btn">Get Quote</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; Global Fleet 2024</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

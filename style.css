@@ -1,0 +1,945 @@
+/* General Styles */
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  header {
+    background-color: #004d00;
+    color: #fff;
+    text-align: left;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    height: 8%;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  header h1, header h2 {
+    margin: 0;
+  }
+  
+  nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: right;
+  }
+  
+  nav ul.about-us {
+    display: flex;
+    list-style: none;
+  }
+  
+  nav li {
+    position: relative;
+    margin-right: 20px;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  nav a:hover {
+    background-color: #003d00;
+  }
+  
+  nav ul.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+  
+  nav li:hover ul.dropdown-menu {
+    display: block;
+  }
+  
+  nav ul.dropdown-menu li {
+    padding: 10px;
+  }
+  
+  nav ul.dropdown-menu li a {
+    color: #333;
+  }
+  
+  /* Hero Section */
+  .hero {
+    text-align: center;
+    padding: 100px 20px 20px;
+    background-color: #e2f4e2;
+  }
+  
+  .hero img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .hero p {
+    font-size: 1.2em;
+    margin: 20px 0;
+  }
+  
+  /* Buttons */
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #004d00;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #003d00;
+  }
+  
+  /* Truck Categories */
+  .truck-categories {
+    padding: 40px;
+    text-align: center;
+    background-color: #ffffff;
+  }
+  
+  .truck-categories h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  
+  .truck-categories p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+  }
+  
+  .truck-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: auto;
+  }
+  
+  .truck-card {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .truck-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .truck-card-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    z-index: 1;
+    font-size: 1.2em;
+    background: rgba(0, 77, 0, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .truck-card-details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: #fff;
+    color: #333;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .truck-card-details img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .truck-card:hover .truck-card-details {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .truck-card-details p {
+    margin-top: 10px;
+    font-size: 0.9em;
+  }
+  
+  /* Forms */
+  form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  
+  label {
+    display: block;
+    margin: 10px 0 5px;
+  }
+  
+  input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #004d00;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #003d00;
+}
+
+/* Additional Sections */
+.pickup-drop, .tracking, .contact {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #ffffff;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+footer {
+  background-color: #004d00;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Specific Styles */
+.hero {
+  background-color: #e2f4e2;
+}
+
+.truck-categories {
+  padding: 40px;
+}
+
+.truck-card {
+  position: relative;
+  width: 300px;
+  height: 200px;
+}
+
+.truck-card-content {
+  background: rgba(0, 77, 0, 0.7);
+}
+
+.truck-card-details {
+  background-color: #fff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .truck-items {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .truck-card {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  header {
+    padding: 10px;
+    text-align: center;
+  }
+
+  nav ul.about-us {
+    justify-content: center;
+  }
+}
+  
+.truck-categories {
+    padding: 40px;
+  }
+  
+  .truck-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .truck-card {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .truck-card-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .truck-card-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+  }
+  
+  .truck-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 77, 0, 0.7);
+    color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+  
+  .truck-card:hover .truck-card-overlay {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .truck-card-overlay h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .truck-card-overlay p {
+    font-size: 0.9em;
+  }
+
+  .highlight-section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #e2f4e2;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .highlight-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+  }
+  
+  .highlight-section p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+  }
+  
+  .highlight-items {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .highlight-card {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .highlight-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+  }
+  
+  .highlight-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .highlight-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 77, 0, 0.7);
+    color: #fff;
+    padding: 15px;
+    box-sizing: border-box;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    text-align: center;
+  }
+  
+  .highlight-card:hover .highlight-content {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .highlight-content h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .highlight-content p {
+    font-size: 0.9em;
+  }
+
+  .about-us {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #ffffff;
+  }
+  
+  .about-us h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  .about-us p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+  }
+  
+  .about-us-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .about-us-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .about-us-item.reverse {
+    flex-direction: row;
+  }
+  
+  .about-us-item.full-width {
+    flex-direction: column;
+  }
+  
+  .about-us-text {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .about-us-text h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+  }
+  
+  .about-us-text p {
+    font-size: 1em;
+  }
+  
+  .about-us-image {
+    flex: 1;
+  }
+  
+  .about-us-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .about-us-cta {
+    margin-top: 40px;
+  }
+  
+  .about-us-cta h3 {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  
+  .about-us-cta p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+  }
+  
+  .about-us-cta .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .about-us-cta .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* General Body and Header Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  /* header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  } */
+  
+  header h1 {
+    margin: 0;
+    font-size: 2em;
+  }
+  
+  header h2 {
+    margin: 0;
+    font-size: 1.2em;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin: 0 10px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Tracking Section Styling */
+  .tracking {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .tracking h2 {
+    margin-top: 0;
+    font-size: 1.8em;
+  }
+  
+  .tracking p {
+    font-size: 1.1em;
+    color: #666;
+  }
+  
+  .tracking input[type="text"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+  }
+  
+  .tracking button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #333;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  
+  .tracking button:hover {
+    background-color: #555;
+  }
+  
+  .tracking #tracking-result {
+    margin-top: 20px;
+    font-size: 1.1em;
+    color: #333;
+  }
+  
+
+  header h1 {
+    margin: 0;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 1rem;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  nav a.active {
+    text-decoration: underline;
+  }
+  
+  main {
+    padding: 1rem;
+  }
+  
+  .intro-image, .about-us-image img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .about-us-intro {
+    text-align: center;
+  }
+  
+  .about-us-content {
+    margin: 2rem 0;
+  }
+  
+  .about-us-item {
+    display: flex;
+    margin-bottom: 2rem;
+  }
+  
+  .about-us-item.reverse {
+    flex-direction: row;
+  }
+  
+  .about-us-text {
+    flex: 1;
+    padding: 1rem;
+  }
+  
+  .about-us-image {
+    flex: 1;
+    padding: 1rem;
+  }
+  
+  .about-us-cta {
+    text-align: center;
+    margin: 2rem 0;
+  }
+
+
+  
+  header h1 {
+    margin: 0;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 1rem;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  nav a.active {
+    text-decoration: underline;
+  }
+  
+  /* Pickup-Drop Section styles */
+  .pickup-drop {
+    padding: 2rem;
+  }
+  
+  .pickup-drop h2 {
+    margin-bottom: 1rem;
+  }
+  
+  .pickup-drop form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .pickup-drop label {
+    margin-bottom: 0.5rem;
+  }
+  
+  .pickup-drop input,
+  .pickup-drop select {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+  }
+ 
+
+
+  
+  header h1 {
+    margin: 0;
+  }
+
+/* Hero section styles */
+.hero {
+    background: #f5f5f5;
+    padding: 2rem 2rem; /* Add more padding to avoid overlap */
+    text-align: center;
+    position: relative;
+    z-index: 1; /* Ensure hero section is above background but below header */
+    margin-top: 80px; /* Add margin to account for header height */
+  }
+  
+
+.hero img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+  
+  .hero p {
+    margin: 1rem 0;
+  }
+  
+  /* General body styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Adding padding to the top of the body or hero section */
+  body {
+    padding-top: 80px; /* Same height as the header */
+  }
+  
+  /* Container for truck items */
+.truck-items {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
+    gap: 20px; /* Space between items */
+    padding: 20px; /* Padding around the container */
+    box-sizing: border-box; /* Includes padding in the container's width/height calculation */
+  }
+  
+  /* Ensure each truck card takes up 1/3 of the container width minus gaps */
+  .truck-card {
+    flex: 1 1 calc(33.333% - 20px); /* 33.333% width minus the gap */
+    max-width: calc(33.333% - 20px); /* Ensure cards don’t grow beyond intended width */
+    box-sizing: border-box; /* Includes padding and border in the element's width/height calculation */
+    background: #fff; /* Background color */
+    border: 1px solid #ddd; /* Border around each card */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Hide overflow for cleaner look */
+    text-align: center; /* Center text inside card */
+    position: relative; /* Position relative for overlay positioning */
+  }
+  
+  /* Image inside truck card */
+  .truck-card img {
+    width: 100%; /* Ensure image fits card width */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  /* Content overlay inside truck card */
+  .truck-card-overlay {
+    position: absolute; /* Overlay positioned on top of image */
+    bottom: 0; /* Align at the bottom */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width of the card */
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay with transparency */
+    color: #fff; /* Text color */
+    padding: 10px; /* Padding inside overlay */
+    text-align: center; /* Center text inside overlay */
+  }
+  
+  /* Responsive adjustments for smaller screens */
+  @media (max-width: 768px) {
+    .truck-card {
+      flex: 1 1 100%; /* One card per row */
+      max-width: 100%;
+    }
+  }
+  
+  .logoImage img{
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 8px;
+    align-items: start;
+  }
+
+  /* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between; /* Distribute space between logo and navigation */
+    align-items: center; /* Center items vertically */
+    background-color: #004d00;
+    color: #fff;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  /* Logo Styles */
+  header .logoImage {
+    height: 100px; /* Set the height of the logo */
+    width: auto; /* Maintain aspect ratio */
+  }
+  
+  /* Navigation Styles */
+  nav {
+    flex: 1; /* Allows nav to take up remaining space */
+  }
+  
+  nav ul {
+    display: flex; /* Arrange items in a row */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: flex-end; /* Align items to the right */
+    gap: 20px; /* Space between items */
+  }
+
+  ul {
+    align-items: center;
+}
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  nav a:hover {
+    background-color: #003d00;
+  }
+  
+  /* Button Styles */
+  .btn {
+    background-color: #004d00;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  
+  .btn:hover {
+    background-color: #003d00;
+  }
+  
+
+  /* Contact Section Styling */
+.contact {
+    padding: 40px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.contact input, .contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact button {
+    padding: 10px 20px;
+    background-color: #004d00;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact button:hover {
+    background-color: #003d00;
+}

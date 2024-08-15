@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Track Your Shipment - Global Fleet</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img class="logoImage" src="images/Screenshot_2024-08-12_215920-removebg-preview.png" alt="Logo">
+        <nav>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about-us.html">About Us</a></li>
+            <li><a href="/contact-us.html">Contact Us</a></li>
+            <li><a href="get-quote.html" class="btn">Get a Quote</a></li>
+            <li><a href="/track-shipment.html" class="btn">Track Your Shipment</a></li>
+          </ul>
+        </nav>
+      </header>
+      
+
+  <section class="tracking">
+    <h2>Track Your Shipment</h2>
+    <p>Enter your tracking number to view the real-time status of your shipment.</p>
+    <input type="text" id="tracking-number" placeholder="Enter Tracking Number">
+    <button type="button" class="btn" onclick="trackShipment()">Track Now</button>
+  </section>
+
+  <footer>
+    <p>&copy; Global Fleet 2024</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    document.getElementById('tracking-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const trackingNumber = document.getElementById('tracking-number').value;
+      // Replace this with actual tracking logic, e.g., making an API call to get tracking details
+      document.getElementById('tracking-result').innerHTML = `<p>Tracking information for <strong>${trackingNumber}</strong> is currently unavailable. Please try again later.</p>`;
+    });
+  </script>
+</body>
+</html>
