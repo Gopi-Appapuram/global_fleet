@@ -628,3 +628,27 @@ test('Connect canvas nodes', async ({ browser }) => {
 
   await page.screenshot({ path: 'final.png' });
 });
+
+
+
+ Waiting 60 s — add your initial nodes (e.g. Start, GOPI, TEST)...
+
+🔍 Detecting canvas nodes...
+   ✅ Already in horizontal layout
+   ✅ [0] "Start" [Start]
+   ✅ [1] "GOPI" [Subagent]
+
+🔗 "Start".bottom → "GOPI".top
+   FROM: (1146,471) → TO: (1112,551)
+   ✅ "Start" → "GOPI" connected!
+
+⏳ Waiting 30 s — add "TEST" node now and connect it to "GOPI"...
+
+🔍 Detecting canvas nodes...
+   ✅ Already in horizontal layout
+   ⚠️  Could not detect handles for "TEST"
+   ✅ [0] "TEST" [Subagent]
+❌ Source "GOPI" not found. Available: "TEST"
+  ✓  1 [chrome] › tests\connect-node.spec.ts:1219:5 › Connect canvas nodes (4.3m)
+
+  1 passed (4.3m)
